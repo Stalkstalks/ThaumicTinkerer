@@ -162,7 +162,8 @@ public class ItemCleansingTalisman extends ItemBase implements IBauble {
     @Override
     public void onWornTick(ItemStack par1ItemStack, EntityLivingBase player) {
         World par2World = player.worldObj;
-        if (isEnabled(par1ItemStack) && !par2World.isRemote) {
+        if (isEnabled(par1ItemStack) && (par1ItemStack.getItemDamage() < (par1ItemStack.getMaxDamage() - 1))
+                && !par2World.isRemote) {
             if (player.ticksExisted % 20 == 0) {
                 if (player instanceof EntityPlayer) {
 
@@ -254,7 +255,9 @@ public class ItemCleansingTalisman extends ItemBase implements IBauble {
                             damage = 10;
                         }
 
-                        par1ItemStack.damageItem(damage, player);
+                        par1ItemStack.damageItem(
+                                Math.min(damage, par1ItemStack.getMaxDamage() - par1ItemStack.getItemDamage()),
+                                player);
                         if (par1ItemStack.stackSize <= 0) {
                             // Slot 0 = talisman slot.
                             BaublesApi.getBaubles((EntityPlayer) player).setInventorySlotContents(0, null);

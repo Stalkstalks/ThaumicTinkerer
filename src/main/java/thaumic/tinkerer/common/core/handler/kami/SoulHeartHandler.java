@@ -81,6 +81,13 @@ public class SoulHeartHandler {
         if (event.entityLiving instanceof EntityPlayer && event.ammount > 0) {
             EntityPlayer player = (EntityPlayer) event.entityLiving;
             event.ammount = removeHP(player, (int) event.ammount);
+            int hp = getHP(player);
+            if (hp == 20) {
+                event.ammount = 0;
+            } else {
+                event.ammount *= ((20 - hp) / 20.0);
+            }
+            removeHP(player, 2);
             updateClient(player);
         }
     }

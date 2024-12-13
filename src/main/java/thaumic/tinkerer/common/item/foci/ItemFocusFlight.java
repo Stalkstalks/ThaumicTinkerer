@@ -97,15 +97,15 @@ public class ItemFocusFlight extends ItemModFocus {
     public FocusUpgradeType[] getPossibleUpgradesByRank(ItemStack itemstack, int rank) {
         switch (rank) {
             case 1:
-                return new FocusUpgradeType[] { FocusUpgradeType.frugal };
+                return new FocusUpgradeType[] { FocusUpgradeType.frugal, FocusUpgradeType.potency };
             case 2:
-                return new FocusUpgradeType[] { FocusUpgradeType.frugal };
+                return new FocusUpgradeType[] { FocusUpgradeType.frugal, FocusUpgradeType.potency };
             case 3:
-                return new FocusUpgradeType[] { FocusUpgradeType.frugal };
+                return new FocusUpgradeType[] { FocusUpgradeType.frugal, FocusUpgradeType.potency };
             case 4:
-                return new FocusUpgradeType[] { FocusUpgradeType.frugal };
+                return new FocusUpgradeType[] { FocusUpgradeType.frugal, FocusUpgradeType.potency };
             case 5:
-                return new FocusUpgradeType[] { FocusUpgradeType.frugal };
+                return new FocusUpgradeType[] { FocusUpgradeType.frugal, FocusUpgradeType.potency };
         }
         return null;
     }

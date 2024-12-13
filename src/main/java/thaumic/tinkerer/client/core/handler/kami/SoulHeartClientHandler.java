@@ -46,10 +46,10 @@ public final class SoulHeartClientHandler {
         float endY = 9 * size;
 
         tess.startDrawingQuads();
-        tess.addVertexWithUV(x, y + 9, 0, startX, endY);
-        tess.addVertexWithUV(x + (full ? 9 : 7), y + 9, 0, endX, endY);
-        tess.addVertexWithUV(x + (full ? 9 : 7), y, 0, endX, startY);
-        tess.addVertexWithUV(x, y, 0, startX, startY);
+        tess.addVertexWithUV(x, y + 9, 10, startX, endY);
+        tess.addVertexWithUV(x + (full ? 9 : 7), y + 9, 10, endX, endY);
+        tess.addVertexWithUV(x + (full ? 9 : 7), y, 10, endX, startY);
+        tess.addVertexWithUV(x, y, 10, startX, startY);
         tess.draw();
     }
 
@@ -79,11 +79,8 @@ public final class SoulHeartClientHandler {
 
         Minecraft mc = Minecraft.getMinecraft();
         mc.renderEngine.bindTexture(heartsResource);
-        int x = resolution.getScaledWidth() / 2 + 10;
-        int y = resolution.getScaledHeight() - ConfigHandler.soulHeartHeight;
-        if (player.getAir() < 300) {
-            y = resolution.getScaledHeight() - (ConfigHandler.soulHeartHeight + 10);
-        }
+        int x = resolution.getScaledWidth() / 2 - 91;
+        int y = resolution.getScaledHeight() - 39 + ConfigHandler.soulHeartHeight;
 
         mc.renderEngine.bindTexture(heartsResource);
         int it = 0;

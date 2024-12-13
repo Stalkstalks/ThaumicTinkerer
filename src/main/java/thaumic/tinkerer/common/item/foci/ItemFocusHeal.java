@@ -64,11 +64,11 @@ public class ItemFocusHeal extends ItemModFocus {
                 (float) p.posZ + p.worldObj.rand.nextFloat() - 0.5F,
                 0);
 
-        if (progress >= 30 - potency * 10 / 3) {
+        if (progress >= 32 >> potency) {
             playerHealData.put(p.getGameProfile().getName(), 0);
 
             wand.consumeAllVis(stack, p, visUsage, true, false);
-            p.heal(1 + potency);
+            p.heal(1);
             p.worldObj.playSoundAtEntity(p, "thaumcraft:wand", 0.5F, 1F);
             // System.out.println("potency"+potency);
             // System.out.println("progress"+progress);

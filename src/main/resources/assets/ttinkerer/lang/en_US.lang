@@ -395,7 +395,7 @@ ttresearch.page.TTENCH_SHOCKWAVE.0=You have formulated an enchantment that enabl
 
 # -- ENCHANTMENT: POUNCE
 ttresearch.name.TTENCH_POUNCE=Enchantment: Pounce
-ttresearch.lore.TTENCH_POUNCE=Light on your feet
+ttresearch.lore.TTENCH_POUNCE=Like a kitty-cat
 ttresearch.page.TTENCH_POUNCE.0=You have formulated an enchantment that enables you to to leap on your foes.<BR><BR>This enchantment can be applied on leggings. When done so, your attacks will be more powerful while you are in the air.
 
 
@@ -471,7 +471,7 @@ ttresearch.page.ICHOR.0=Through extensive study in all subjects of thaumaturgy y
 
 # -- ICHORCLOTH
 ttresearch.name.ICHOR_CLOTH=Ichorcloth
-ttresearch.lore.ICHOR_CLOTH=Hope you brought a strong needle
+ttresearch.lore.ICHOR_CLOTH=Life Fiber Synchronization
 ttresearch.page.ICHOR_CLOTH.0=You found a way of infusing Magical Fabric with your latest discovery, Ichor. Funnily enough, this process does not require the typical infusion procedure, as the Ichor easily absorbs the diamond and blends with the fabric.<BR><BR>However, to do this, you require not only the best wand you ever designed to be fully charged, but you must also be wearing a full set of thaumaturge's robes, in order to convey enough energy for the creation.<BR><BR>You think it's time you start designing a new wand.
 
 # -- ICHORIUM
@@ -546,7 +546,7 @@ ttresearch.page.ICHOR_AXE_GEM.0=You awakened the real potential of an Ichorium A
 ttresearch.name.ICHOR_SWORD_GEM=Awakened Ichorium Sword
 ttresearch.lore.ICHOR_SWORD_GEM=An elegant weapon from a more civilised age
 ttresearch.page.ICHOR_SWORD_GEM.0=You awakened the real potential of an Ichorium Sword. This sword contains all the traits from the regular one, however, by shift right clicking on it, you can change what mode it's on.<BR><BR>On Single Mode (Green) it'll attack mobs normally.<BR><BR>On Area Mode (Red) it'll attack all mobs of the same type in a 3 block radius of the attacked one.<BR><BR>On Soul Mode (Blue) it'll deal less damage than normally, but every hit will bless the attacker with a Soul Heart.<BR>[continued]
-ttresearch.page.ICHOR_SWORD_GEM.1=Soul Hearts are hearts that can only be used once. They show up as metallic hearts below your food bar, when existent. They block damage their wielder would take, but disappear in the process.
+ttresearch.page.ICHOR_SWORD_GEM.1=Soul Hearts appear shielding the wielder's health, and reduce damage their wielder would take, disappearing in the process.
 
 # -- BOTTOMLESS POUCH
 ttresearch.name.ICHOR_POUCH=Bottomless Pouch

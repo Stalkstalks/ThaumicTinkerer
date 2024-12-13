@@ -56,9 +56,9 @@ public class ItemFocusShadowbeam extends ItemModKamiFocus {
     @Override
     public void onUsingFocusTick(ItemStack stack, EntityPlayer player, int count) {
         ItemWandCasting wand = (ItemWandCasting) stack.getItem();
-        int potency = wand.getFocusPotency(stack);
 
         if (!player.worldObj.isRemote && wand.consumeAllVis(stack, player, getVisCost(stack), true, false)) {
+            int potency = wand.getFocusPotency(stack);
 
             if (player.worldObj.rand.nextInt(10) == 0)
                 player.worldObj.playSoundAtEntity(player, "thaumcraft:brain", 0.5F, 1F);
@@ -170,7 +170,7 @@ public class ItemFocusShadowbeam extends ItemModKamiFocus {
         private int initialOffset = 2;
         private int length = 298;
         private int maxTicks = initialOffset + length;
-        private int size = 2;
+        private int size = 4;
 
         private int potency;
         private Vector3 movementVector;
@@ -227,7 +227,7 @@ public class ItemFocusShadowbeam extends ItemModKamiFocus {
                         && movingobjectposition.entityHit != getThrower()
                         && getThrower() instanceof EntityPlayer
                         && !movingobjectposition.entityHit.worldObj.isRemote) {
-                    int fullDamage = (potency > 0) ? (int) (DAMAGE + DAMAGE * (0.2 * potency)) : DAMAGE;
+                    int fullDamage = (potency > 0) ? (int) (DAMAGE + DAMAGE * (0.6 * potency)) : DAMAGE;
                     movingobjectposition.entityHit
                             .attackEntityFrom(DamageSource.causePlayerDamage((EntityPlayer) getThrower()), fullDamage);
                 }

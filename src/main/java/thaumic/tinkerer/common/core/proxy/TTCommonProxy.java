@@ -98,7 +98,7 @@ public class TTCommonProxy {
     public Item.ToolMaterial toolMaterialIchor;
 
     public void preInit(FMLPreInitializationEvent event) {
-        toolMaterialIchor = EnumHelper.addToolMaterial("ICHOR", 4, -1, 10F, 5F, 25);
+        toolMaterialIchor = EnumHelper.addToolMaterial("ICHOR", 4, -1, 10F, 6F, 25);
         ModCreativeTab.INSTANCE = new ModCreativeTab();
         ConfigHandler.loadConfig(event.getSuggestedConfigurationFile());
         // ModItems.initItems();

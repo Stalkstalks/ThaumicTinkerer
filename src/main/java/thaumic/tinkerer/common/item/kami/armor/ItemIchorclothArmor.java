@@ -31,7 +31,6 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import thaumcraft.api.IRunicArmor;
 import thaumcraft.api.IVisDiscountGear;
-import thaumcraft.api.IWarpingGear;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.research.ResearchPage;
@@ -52,7 +51,7 @@ import thaumic.tinkerer.common.research.KamiResearchItem;
 import thaumic.tinkerer.common.research.ResearchHelper;
 
 public class ItemIchorclothArmor extends ItemArmor
-        implements IVisDiscountGear, ISpecialArmor, ITTinkererItem, IWarpingGear, IRunicArmor {
+        implements IVisDiscountGear, ISpecialArmor, ITTinkererItem, IRunicArmor {
 
     static ItemArmor.ArmorMaterial material = EnumHelper.addArmorMaterial("ICHOR", 0, new int[] { 3, 8, 6, 3 }, 20);
 
@@ -221,11 +220,6 @@ public class ItemIchorclothArmor extends ItemArmor
                         new ItemStack(ThaumicTinkerer.registry.getFirstItemFromClass(ItemKamiResource.class), 1, 1));
         }
         return null;
-    }
-
-    @Override
-    public int getWarp(ItemStack arg0, EntityPlayer arg1) {
-        return 3;
     }
 
     @Override

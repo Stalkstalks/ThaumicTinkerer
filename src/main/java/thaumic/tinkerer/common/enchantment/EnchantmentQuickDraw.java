@@ -17,7 +17,7 @@ import net.minecraft.enchantment.EnumEnchantmentType;
 public class EnchantmentQuickDraw extends EnchantmentMod {
 
     protected EnchantmentQuickDraw(int par1) {
-        super(par1, 2, EnumEnchantmentType.bow);
+        super(par1, 5, EnumEnchantmentType.bow);
     }
 
     @Override

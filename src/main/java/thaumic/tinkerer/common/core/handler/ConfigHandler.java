@@ -139,7 +139,7 @@ public final class ConfigHandler {
         soulHeartHeight = config.getInt(
                 "soulHeart.height",
                 "general",
-                49,
+                0,
                 0,
                 256,
                 "The height of the Soul Heart bar. You can change this if you have a mod that adds a bar in that spot.");
@@ -180,7 +180,7 @@ public final class ConfigHandler {
         baseDamageShadowbeam = config.getInt(
                 "shadowbeam base damage",
                 "balance.shadowbeam",
-                8,
+                15,
                 Integer.MIN_VALUE,
                 Integer.MAX_VALUE,
                 "base damage of the shadowbeam focus");

@@ -138,7 +138,7 @@ public class ItemFocusSmelt extends ItemModFocus {
                 }
 
                 if (!decremented) {
-                    int potency = wand.getFocusPotency(stack); // TODO review what this does
+                    int potency = wand.getFocusPotency(stack);
                     playerData.put(p.getGameProfile().getName(), new SmeltData(pos, 20 - Math.min(3, potency) * 5));
                 } else {
                     // Sound
@@ -204,15 +204,15 @@ public class ItemFocusSmelt extends ItemModFocus {
     public FocusUpgradeType[] getPossibleUpgradesByRank(ItemStack itemstack, int rank) {
         switch (rank) {
             case 1:
-                return new FocusUpgradeType[] { FocusUpgradeType.frugal /* , FocusUpgradeType.potency */ };
+                return new FocusUpgradeType[] { FocusUpgradeType.frugal, FocusUpgradeType.potency };
             case 2:
-                return new FocusUpgradeType[] { FocusUpgradeType.frugal /* , FocusUpgradeType.potency */ };
+                return new FocusUpgradeType[] { FocusUpgradeType.frugal, FocusUpgradeType.potency };
             case 3:
-                return new FocusUpgradeType[] { FocusUpgradeType.frugal /* , FocusUpgradeType.potency */ };
+                return new FocusUpgradeType[] { FocusUpgradeType.frugal, FocusUpgradeType.potency };
             case 4:
-                return new FocusUpgradeType[] { FocusUpgradeType.frugal /* , FocusUpgradeType.potency */ };
+                return new FocusUpgradeType[] { FocusUpgradeType.frugal, FocusUpgradeType.potency };
             case 5:
-                return new FocusUpgradeType[] { FocusUpgradeType.frugal /* , FocusUpgradeType.potency */ };
+                return new FocusUpgradeType[] { FocusUpgradeType.frugal, FocusUpgradeType.potency };
         }
         return null;
     }

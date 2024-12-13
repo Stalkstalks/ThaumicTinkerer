@@ -46,8 +46,8 @@ public class ItemFocusTelekinesis extends ItemModFocus {
 
         Vector3 target = Vector3.fromEntityCenter(player);
 
-        final int range = 6;
-        final double distance = range - 1;
+        int range = 6 + wand.getFocusEnlarge(stack);
+        double distance = range - 1;
         if (!player.isSneaking()) target.add(new Vector3(player.getLookVec()).multiply(distance));
 
         target.y += 0.5;
@@ -100,15 +100,15 @@ public class ItemFocusTelekinesis extends ItemModFocus {
     public FocusUpgradeType[] getPossibleUpgradesByRank(ItemStack itemstack, int rank) {
         switch (rank) {
             case 1:
-                return new FocusUpgradeType[] { FocusUpgradeType.frugal };
+                return new FocusUpgradeType[] { FocusUpgradeType.frugal, FocusUpgradeType.enlarge };
             case 2:
-                return new FocusUpgradeType[] { FocusUpgradeType.frugal };
+                return new FocusUpgradeType[] { FocusUpgradeType.frugal, FocusUpgradeType.enlarge };
             case 3:
-                return new FocusUpgradeType[] { FocusUpgradeType.frugal };
+                return new FocusUpgradeType[] { FocusUpgradeType.frugal, FocusUpgradeType.enlarge };
             case 4:
-                return new FocusUpgradeType[] { FocusUpgradeType.frugal };
+                return new FocusUpgradeType[] { FocusUpgradeType.frugal, FocusUpgradeType.enlarge };
             case 5:
-                return new FocusUpgradeType[] { FocusUpgradeType.frugal };
+                return new FocusUpgradeType[] { FocusUpgradeType.frugal, FocusUpgradeType.enlarge };
         }
         return null;
     }
