@@ -83,8 +83,10 @@ public class ItemGemLegs extends ItemIchorclothArmorAdv {
             ItemStack armor = player.getCurrentArmor(1);
             if (armor.getItemDamage() == 1 || !ThaumicTinkerer.proxy.armorStatus(player)) return;
 
-            if (player.isBurning()) player.heal(0.5F);
-            addPotionEffect(player, Potion.fireResistance, 119, -1);
+            if (player.isBurning()) {
+                player.heal(0.5F);
+                addPotionEffect(player, Potion.fireResistance, 119, -1);
+            }
             if (ConfigHandler.shouldKamiLegsDoLightFeature) {
                 setNearBrightNitor(player);
             }
